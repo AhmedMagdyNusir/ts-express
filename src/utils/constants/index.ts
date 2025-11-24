@@ -1,3 +1,3 @@
-export const ENVIRONMENT = process.env.ENVIRONMENT || "development";
+export const ENVIRONMENT = process.env.ENVIRONMENT;
 
-export const PORT = process.env.PORT || 3000;
+export const PORT = process.env.PORT;
