@@ -1,12 +1,8 @@
-import loadDotenv from "@/utils/dotenv-loader";
-
-loadDotenv();
-
 import express from "express";
+import config from "@/utils/config";
 import routes from "@/routes";
 import logger from "@/middlewares/logger";
 import globalErrorHandler from "@/middlewares/error-handler";
-import { PORT, ENVIRONMENT } from "@/utils/constants";
 
 // Create an Express app
 const app = express();
@@ -22,6 +18,9 @@ app.use(routes);
 
 // Middleware to handle errors globaly
 app.use(globalErrorHandler);
+
+const PORT = config.require("PORT");
+const ENVIRONMENT = config.require("ENVIRONMENT");
 
 // Start the server
 app.listen(PORT, () => console.log(`Server started on port ${PORT} in ${ENVIRONMENT} mode.`));
