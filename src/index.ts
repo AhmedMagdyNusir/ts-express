@@ -1,6 +1,6 @@
-import loadEnvironmentVariables from "@/utils/load-env-vars";
+import loadDotenv from "@/utils/dotenv-loader";
 
-loadEnvironmentVariables();
+loadDotenv();
 
 import express from "express";
 import routes from "@/routes";

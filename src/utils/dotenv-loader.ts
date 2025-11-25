@@ -1,7 +1,7 @@
 import { readFileSync } from "fs";
 import { resolve } from "path";
 
-export default function loadEnvironmentVariables(): void {
+export default function loadDotenv(): void {
   try {
     const data = readFileSync(resolve(__dirname, "..", "..", ".env"), "utf8");
     const lines = data.split("\n");
