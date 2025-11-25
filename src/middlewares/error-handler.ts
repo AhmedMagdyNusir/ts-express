@@ -1,5 +1,5 @@
 import type { Request, Response, NextFunction } from "express";
-import config from "@/utils/config";
+import config from "@/config";
 import ApiError from "@/utils/classes/ApiError";
 
 export default function globalErrorHandler(err: ApiError, req: Request, res: Response, next: NextFunction): void {

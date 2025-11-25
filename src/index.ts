@@ -1,5 +1,5 @@
 import express from "express";
-import config from "@/utils/config";
+import config from "@/config";
 import routes from "@/routes";
 import logger from "@/middlewares/logger";
 import globalErrorHandler from "@/middlewares/error-handler";
